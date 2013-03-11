@@ -13,3 +13,7 @@ Version:        0.1.0
 h1.site-title a {
     color: #009900;
 }
+
+.row-fluid [class*="span"] {
+  float: left;
+}
