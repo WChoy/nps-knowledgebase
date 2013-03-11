@@ -7,7 +7,7 @@
 					<div class="page-header">
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
-							<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+							<span><?php _e("Knowledge Organized by ", "bonestheme"); ?></span> <?php single_cat_title(); ?>
 						</h1>
 					<?php } elseif (is_tag()) { ?> 
 						<h1 class="archive_title h2">
@@ -48,7 +48,7 @@
 						
 							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 						
-							<?php the_excerpt(); ?>
+							<?php // the_excerpt(); ?>
 					
 						</section> <!-- end article section -->
 						

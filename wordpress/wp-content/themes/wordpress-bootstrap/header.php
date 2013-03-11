@@ -122,6 +122,8 @@
 				</div>
 			
 			</div> <!-- end #inner-header -->
+      
+      <?php get_sidebar('header'); // header ?>
 		
 		</header> <!-- end header -->
 		
