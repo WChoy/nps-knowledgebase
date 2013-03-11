@@ -65,6 +65,17 @@ you like. Enjoy!
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
+    // NPS Custom sidebar
+    register_sidebar(array(
+      'id' => 'header',
+      'name' => 'Header',
+      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h4 class="widgettitle">',
+      'after_title' => '</h4>',
+    ));
+    // NPS Custom header sidebar - END
+
     register_sidebar(array(
     	'id' => 'sidebar1',
     	'name' => 'Main Sidebar',
@@ -129,6 +140,7 @@ function bones_register_sidebars() {
     sidebar-sidebar2.php
     
     */
+    
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
