@@ -45,14 +45,4 @@ function np_knowledgebase_admin_bar_my_custom_account_menu( $wp_admin_bar ) {
 
 /** END CHANGE HOWDY **/
 
-/**
- * Add Metabox for Resources
- */
-add_action( 'add_meta_boxes', 'prowp_meta_box_init' );
-// meta box functions for adding the meta box and saving the data
-function prowp_meta_box_init() {
-// create our custom meta box
-add_meta_box( 'prowp-meta', 'Product Information',
-'prowp_meta_box', 'post', 'side', 'default' );
-}
 ?>

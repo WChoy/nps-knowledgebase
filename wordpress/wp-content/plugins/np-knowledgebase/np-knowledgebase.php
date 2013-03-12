@@ -36,15 +36,15 @@ if ( is_admin() ) {
 }
 
 
-//add_filter('gettext', 'change_howdy', 10, 3);
-//
-//function change_howdy($translated, $text, $domain) {
-//  if (!is_admin() || 'default' != $domain)
-//    return $translated;
-//  if (false !== strpos($translated, 'Howdy'))
-//    return str_replace('Howdy', 'Welcome back', $translated);
-//  return $translated;
-//}
+add_filter('gettext', 'change_howdy', 10, 3);
+
+function change_howdy($translated, $text, $domain) {
+  if (!is_admin() || 'default' != $domain)
+    return $translated;
+  if (false !== strpos($translated, 'Howdy'))
+    return str_replace('Howdy', 'Welcome back', $translated);
+  return $translated;
+}
 
 /**
  *  Add a category metabox – http://shibashake.com/wordpress-theme/add-tags-and-categories-to-your-wordpress-page
@@ -53,8 +53,8 @@ if ( is_admin() ) {
 add_filter('request', 'np_knowledgebase_expanded_request');
 
 function np_knowledgebase_expanded_request($q) {
-  if (isset($q['tag']) || isset($q['category_name']))
-              $q['post_type'] = array('post', 'page');
+  if (isset($q['tag']) || isset($q['category_name']) || isset($q['cat']))
+    $q['post_type'] = array('post', 'page');
   return $q;
 }
 /**  Add a category metabox to WordPress page. **/
@@ -62,5 +62,9 @@ function np_knowledgebase_expanded_request($q) {
 
 /**
  *  http://en.forums.wordpress.com/topic/how-to-create-submenus-of-a-category-please
+ */
+
+/**
+ * Category page sort order - http://wordpress.org/support/topic/category-page-sort-order
  */
 ?>
