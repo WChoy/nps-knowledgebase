@@ -1,0 +1,38 @@
+/* 
+    Document   : northpoint
+    Created on : Mar 12, 2013, 10:11:56 PM
+    Author     : williamchoy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+#sidebar-header .widget_breadcrumb_navxt {
+  float: left;
+}
+
+.row-fluid div.left {
+  float: left;
+}
+.row-fluid div.right {
+  float: right;
+}
+header a#logo {
+  width: 200px;
+  height: 20px;
+/*  top: 28px;*/
+/*  right: 30px;*/
+  background-image: url(images/logo_small.png);
+}
+
+header a#logo {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: block;
+/*  position: absolute;*/
+  text-indent: -9999px;
+  margin-right: 20px;
+}
+.span6 .hero-unit h1 {
+  font-size: 30px;
+}

@@ -2,7 +2,7 @@
 			
 			<div id="content" class="clearfix row-fluid">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span9 clearfix" role="main">
 				
 					<div class="page-header">
 					<?php if (is_category()) { ?>

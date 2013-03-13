@@ -80,27 +80,39 @@ Template Name: Homepage
 								// not sure why this isn't working yet
 							?>
 						
-							<div class="hero-unit" style="background-image: url('<?php echo $featured_src; ?>'); background-repeat: no-repeat; background-position: 0 0;">
+							<!-- div class="hero-unit" style="background-image: url('<?php // echo $featured_src; ?>'); background-repeat: no-repeat; background-position: 0 0;" -->
 
-								<?php the_post_thumbnail( 'wpbs-featured-home' ); ?>
+								<?php // the_post_thumbnail( 'wpbs-featured-home' ); ?>
 
-								<h1><?php the_title(); ?></h1>
+								<!-- h1><?php // the_title(); ?></h1 -->
 								
-								<?php echo get_post_meta($post->ID, 'custom_tagline' , true);?>
+								<?php // echo get_post_meta($post->ID, 'custom_tagline' , true);?>
 							
-							</div>
+							<!-- /div -->
 
 						</header>
 						
 						<section class="row-fluid post_content">
-						
-							<div class="span8">
-						
+              
+							<!-- div class="span8" -->
+							<div class="span12">
+
+                <div class="span6" style="float: right;">
+                  <?php the_post_thumbnail( 'wpbs-featured-home' ); ?>
+                </div>
+                
+                <div class="span6" style="float: left;">
+                  <div class="hero-unit" style="background-image: url('<?php // echo $featured_src; ?>'); background-repeat: no-repeat; background-position: 0 0;" -->
+                    <h1><?php the_title(); ?></h1>
+                    <?php echo get_post_meta($post->ID, 'custom_tagline' , true);?>
+                  </div>
+                </div>
+                
 								<?php the_content(); ?>
 								
 							</div>
 							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
+							<?php // get_sidebar('sidebar2'); // sidebar 2 ?>
 													
 						</section> <!-- end article header -->
 						
