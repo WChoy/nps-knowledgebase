@@ -13,9 +13,14 @@
 
 .row-fluid div.left {
   float: left;
+  margin-left: 0;
+  margin-right: 1.5%;
 }
 .row-fluid div.right {
   float: right;
+  margin-right: 0;
+  margin-left: 1.5%;
+
 }
 header a#logo {
   width: 200px;
