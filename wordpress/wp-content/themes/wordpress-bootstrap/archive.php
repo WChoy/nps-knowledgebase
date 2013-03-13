@@ -7,7 +7,12 @@
 					<div class="page-header">
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
-							<span><?php _e("Knowledge Organized by ", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+							<span><?php _e("Knowledge Organized by ", "bonestheme"); ?></span> 
+							<?php
+							  $term = get_queried_object();
+							  $parent = get_category( $term->parent );
+							  echo $parent->name .' '. $term->name;
+							?>
 						</h1>
 					<?php } elseif (is_tag()) { ?> 
 						<h1 class="archive_title h2">
@@ -40,7 +45,7 @@
 							
 							<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp"></span>.</p>
 						
 						</header> <!-- end article header -->
 					
@@ -52,7 +57,7 @@
 					
 						</section> <!-- end article section -->
 						
-						<footer>
+						<!-- footer>
 							
 						</footer> <!-- end article footer -->
 					
