@@ -7,11 +7,11 @@
 					<div class="page-header">
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
-							<span><?php _e("Knowledge Organized by ", "bonestheme"); ?></span> 
+							<!-- span><?php // _e("Knowledge Organized by ", "bonestheme"); ?></span --> 
 							<?php
 							  $term = get_queried_object();
 							  $parent = get_category( $term->parent );
-							  echo $parent->name .' '. $term->name;
+							  echo $parent->name .' - '. $term->name;
 							?>
 						</h1>
 					<?php } elseif (is_tag()) { ?> 
