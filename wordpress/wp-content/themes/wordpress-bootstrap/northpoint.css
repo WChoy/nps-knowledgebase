@@ -12,7 +12,7 @@
 }
 
 #sidebar1 {
-  margin: 10px 24px 0 0;
+  margin: 10px 2.5641% 0 0;
 }
 header div.left,
 .row-fluid div.left {
@@ -69,7 +69,7 @@ li.current_page_parent>a {
   background-color: yellow;
 }
 
-.widget_nav_menu {
+#sidebar1 .widget {
   background-color: #F5F5F5;
   padding: 5px;
 }

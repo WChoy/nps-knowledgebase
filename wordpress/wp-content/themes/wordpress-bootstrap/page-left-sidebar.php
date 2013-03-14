@@ -10,7 +10,7 @@ Template Name: Left Sidebar Page
             
             	<?php get_sidebar(); // sidebar 1 ?>
 			
-				<div id="main" class="span9 clearfix" role="main">
+				<div id="main" class="span9 clearfix right" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
