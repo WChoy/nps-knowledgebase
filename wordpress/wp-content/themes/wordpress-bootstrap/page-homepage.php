@@ -97,11 +97,11 @@ Template Name: Homepage
 							<!-- div class="span8" -->
 							<div class="span12">
 
-                <div class="span6 right">
+                <div class="span5 right">
                   <?php the_post_thumbnail( 'wpbs-featured-home' ); ?>
                 </div>
                 
-                <div class="span6 left">
+                <div class="span7 left">
                   <div class="hero-unit2" style="background-image: url('<?php // echo $featured_src; ?>'); background-repeat: no-repeat; background-position: 0 0;">
                     <h1><?php the_title(); ?></h1>
                     <?php echo get_post_meta($post->ID, 'custom_tagline' , true);?>

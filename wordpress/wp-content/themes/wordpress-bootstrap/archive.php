@@ -6,7 +6,7 @@
 				
 					<div class="page-header">
 					<?php if (is_category()) { ?>
-						<h1 class="archive_title h2">
+						<h1 class="archive_title h3">
 							<!-- span><?php // _e("Knowledge Organized by ", "bonestheme"); ?></span --> 
 							<?php
 							  $term = get_queried_object();

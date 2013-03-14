@@ -23,7 +23,7 @@ header div.right,
 }
 
 header a#logo {
-  width: 200px;
+  width: 220px;
   height: 20px;
 /*  top: 28px;*/
 /*  right: 30px;*/
@@ -54,10 +54,10 @@ li.current_page_parent>a {
   color: gray;
 }
 
+.archive.category #main article,
 #body .archive.category article {
   margin-bottom: 0;
 }
-
 .archive.category article h3 {
   margin: 0;
 }
@@ -66,7 +66,11 @@ li.current_page_parent>a {
   background-color: yellow;
 }
 
-.span3 {
+.widget {
   background-color: #F5F5F5;
+  padding: 5px;
 }
 
+.page-template-page-homepage-php .hero-unit2 {
+  margin-bottom: 60px;
+}
