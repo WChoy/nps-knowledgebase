@@ -48,6 +48,9 @@ function change_howdy($translated, $text, $domain) {
 
 /**
  *  Add a category metabox – http://shibashake.com/wordpress-theme/add-tags-and-categories-to-your-wordpress-page
+ *
+ *  Category page sort order by menu_order - http://wordpress.org/support/topic/category-page-sort-order
+ *
  **/
 // Retrieve Both Posts and Pages for Category Links
 add_filter('request', 'np_knowledgebase_expanded_request');
@@ -55,16 +58,9 @@ add_filter('request', 'np_knowledgebase_expanded_request');
 function np_knowledgebase_expanded_request($q) {
   if (isset($q['tag']) || isset($q['category_name']) || isset($q['cat']))
     $q['post_type'] = array('post', 'page');
+    $q['orderby'] =  'menu_order';
+    $q['order'] = 'ASC';
   return $q;
 }
-/**  Add a category metabox to WordPress page. **/
 
-
-/**
- *  http://en.forums.wordpress.com/topic/how-to-create-submenus-of-a-category-please
- */
-
-/**
- * Category page sort order - http://wordpress.org/support/topic/category-page-sort-order
- */
 ?>
