@@ -56,11 +56,12 @@ function change_howdy($translated, $text, $domain) {
 add_filter('request', 'np_knowledgebase_expanded_request');
 
 function np_knowledgebase_expanded_request($q) {
-  if (isset($q['tag']) || isset($q['category_name']) || isset($q['cat']))
+  if (isset($q['tag']) || isset($q['category_name']) || isset($q['cat'])) {
     $q['post_type'] = array('post', 'page');
     //
     $q['orderby'] =  'menu_order';
     $q['order'] = 'ASC';
+  }
   return $q;
 }
 
